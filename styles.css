@@ -5,14 +5,27 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(-45deg, #f64914, #dc1863, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
   height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   padding-top: 100px;
-  background: url(./images/christmas.jpg) no-repeat;
-  background-size: cover;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 h1 {
@@ -23,7 +36,7 @@ h1 {
 
 #countdown {
   background-color: rgba(0, 0, 0, 0.332);
-  padding: 20px;
+  padding: 25px;
   font-size: 45px;
   color: #fff;
   border-radius: 5px;
